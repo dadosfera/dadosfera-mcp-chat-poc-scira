@@ -10,26 +10,20 @@ import Script from "next/script";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://mcp.scira.ai"),
-  title: "Scira MCP Chat",
-  description: "Scira MCP Chat is a minimalistic MCP client with a good feature set.",
+  metadataBase: new URL("https://dadosfera.ai"),
+  title: "Dadosfera MCP Chat",
+  description: "Dadosfera MCP Chat is a minimalistic MCP client with a good feature set.",
   openGraph: {
-    siteName: "Scira MCP Chat",
-    url: "https://mcp.scira.ai",
+    siteName: "Dadosfera MCP Chat",
+    url: "https://dadosfera.ai/",
     images: [
       {
-        url: "https://mcp.scira.ai/opengraph-image.png",
+        url: "https://dadosfera.ai/wp-content/webp-express/webp-images/uploads/2022/06/Logo-Dadosfera1-1.png.webp",
         width: 1200,
         height: 630,
       },
     ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Scira MCP Chat",
-    description: "Scira MCP Chat is a minimalistic MCP client with a good feature set.",
-    images: ["https://mcp.scira.ai/twitter-image.png"],
-  },
+  }
 };
 
 export default function RootLayout({

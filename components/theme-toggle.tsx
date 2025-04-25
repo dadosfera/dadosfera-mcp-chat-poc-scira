@@ -43,6 +43,11 @@ export function ThemeToggle({ className, ...props }: React.ComponentProps<typeof
           <Sun className="mr-2 h-4 w-4" />
           <span>Sunset</span>
         </DropdownMenuItem>
+
+        <DropdownMenuItem onSelect={() => setTheme("dff")}>
+          <Sun className="mr-2 h-4 w-4" />
+          <span>Dadosfera</span>
+        </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
   )

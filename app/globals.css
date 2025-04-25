@@ -5,6 +5,7 @@
 @custom-variant dark (&:is(.dark *));
 @custom-variant sunset (&:is(.sunset *));
 @custom-variant black (&:is(.black *));
+@custom-variant dff (&:is(.dff *));
 
 :root {
   --background: oklch(0.99 0.01 56.32);
@@ -181,6 +182,53 @@
   --sidebar-border: oklch(0.25 0.01 340.00);
   --sidebar-ring: oklch(0.45 0.10 35.00);
   --font-sans: Montserrat, sans-serif;
+  --font-serif: Merriweather, serif;
+  --font-mono: Ubuntu Mono, monospace;
+  --radius: 0.625rem;
+  --shadow-2xs: 0px 6px 12px -3px hsl(0 0% 0% / 0.04);
+  --shadow-xs: 0px 6px 12px -3px hsl(0 0% 0% / 0.04);
+  --shadow-sm: 0px 6px 12px -3px hsl(0 0% 0% / 0.09), 0px 1px 2px -4px hsl(0 0% 0% / 0.09);
+  --shadow: 0px 6px 12px -3px hsl(0 0% 0% / 0.09), 0px 1px 2px -4px hsl(0 0% 0% / 0.09);
+  --shadow-md: 0px 6px 12px -3px hsl(0 0% 0% / 0.09), 0px 2px 4px -4px hsl(0 0% 0% / 0.09);
+  --shadow-lg: 0px 6px 12px -3px hsl(0 0% 0% / 0.09), 0px 4px 6px -4px hsl(0 0% 0% / 0.09);
+  --shadow-xl: 0px 6px 12px -3px hsl(0 0% 0% / 0.09), 0px 8px 10px -4px hsl(0 0% 0% / 0.09);
+  --shadow-2xl: 0px 6px 12px -3px hsl(0 0% 0% / 0.22);
+}
+
+.dff {
+  --background: oklch(0.15 0.01 350.00);
+  --foreground: oklch(0.95 0.01 60.00);
+  --card: oklch(0.20 0.01 340.00);
+  --card-foreground: oklch(0.95 0.01 60.00);
+  --popover: oklch(0.20 0.01 340.00);
+  --popover-foreground: oklch(0.95 0.01 60.00);
+  --primary: oklch(0.45 0.20 286);
+  --primary-foreground: oklch(1.00 0 0);
+  --secondary: oklch(0.25 0.01 340.00);
+  --secondary-foreground: oklch(0.95 0.01 60.00);
+  --muted: oklch(0.22 0.01 340.00);
+  --muted-foreground: oklch(0.86 0.01 60.00);
+  --accent: oklch(0.45 0.20 286);
+  --accent-foreground: oklch(0.15 0.01 350.00);
+  --destructive: oklch(0.45 0.16 20.00);
+  --destructive-foreground: oklch(1.00 0 0);
+  --border: oklch(0.25 0.01 340.00);
+  --input: oklch(0.25 0.01 340.00);
+  --ring: oklch(0.45 0.20 286);
+  --chart-1: oklch(0.45 0.20 286);
+  --chart-2: oklch(0.45 0.20 286);
+  --chart-3: oklch(0.80 0.06 54.00);
+  --chart-4: oklch(0.75 0.08 40.00);
+  --chart-5: oklch(0.55 0.10 32.00);
+  --sidebar: oklch(0.15 0.01 350.00);
+  --sidebar-foreground: oklch(0.95 0.01 60.00);
+  --sidebar-primary: oklch(0.40 0.06 34.00);
+  --sidebar-primary-foreground: oklch(1.00 0 0);
+  --sidebar-accent: oklch(0.45 0.20 286);
+  --sidebar-accent-foreground: oklch(0.15 0.01 350.00);
+  --sidebar-border: oklch(0.25 0.01 340.00);
+  --sidebar-ring: oklch(0.45 0.20 286);
+  --font-sans: Quicksand, sans-serif;
   --font-serif: Merriweather, serif;
   --font-mono: Ubuntu Mono, monospace;
   --radius: 0.625rem;
