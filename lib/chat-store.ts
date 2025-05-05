@@ -99,17 +99,6 @@ export function convertToDBMessages(aiMessages: AIMessage[], chatId: string): DB
   });
 }
 
-// Convert DB messages to UI format
-export function convertToUIMessages(dbMessages: Array<Message>): Array<UIMessage> {
-  return dbMessages.map((message) => ({
-    id: message.id,
-    parts: message.parts as MessagePart[],
-    role: message.role as string,
-    content: getTextContent(message), // For backward compatibility
-    createdAt: message.createdAt,
-  }));
-}
-
 export async function saveChat({ id, userId, messages: aiMessages, title }: SaveChatParams) {
   // Generate a new ID if one wasn't provided
   const chatId = id || nanoid();
@@ -224,20 +213,6 @@ export async function saveChat({ id, userId, messages: aiMessages, title }: Save
   }
 
   return { id: chatId };
-}
-
-// Helper to get just the text content for display
-export function getTextContent(message: Message): string {
-  try {
-    const parts = message.parts as MessagePart[];
-    return parts
-      .filter(part => part.type === 'text' && part.text)
-      .map(part => part.text)
-      .join('\n');
-  } catch (e) {
-    // If parsing fails, return empty string
-    return '';
-  }
 }
 
 export async function getChats(userId: string) {

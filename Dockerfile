@@ -1,6 +1,8 @@
 # Use Node.js 20 as the base image
 FROM node:20-alpine AS base
 
+RUN apk add --no-cache libc6-compat
+
 # Install pnpm
 RUN corepack enable && corepack prepare pnpm@latest --activate
 
@@ -11,13 +13,33 @@ WORKDIR /app
 COPY package.json pnpm-lock.yaml ./
 
 # Install dependencies
-RUN pnpm install --frozen-lockfile
+RUN npm i
 
 # Copy the rest of the application
 COPY . .
 
-# Build the application
-RUN pnpm build
+ARG DB_HOST=localhost
+ARG DB_PORT=5432
+ARG DB_NAME=chat
+ARG DB_USER=chat-user
+ARG DB_PASSWORD=my-secret
+
+ENV DB_HOST=$DB_HOST
+ENV DB_PORT=$DB_PORT
+ENV DB_NAME=$DB_NAME
+ENV DB_USER=$DB_USER
+ENV DB_PASSWORD=$DB_PASSWORD
+
+
+RUN npm run db:push
+RUN npm run build
+
+FROM base AS dev
+
+ENV NODE_ENV=development
+EXPOSE 3000
+
+CMD ["npm", "run", "dev"]
 
 # Production stage
 FROM node:20-alpine AS production

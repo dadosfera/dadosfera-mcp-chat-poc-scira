@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Quicksand } from "next/font/google";
 import { ChatSidebar } from "@/components/chat-sidebar";
 import { SidebarTrigger } from "@/components/ui/sidebar";
 import { Menu } from "lucide-react";
@@ -7,14 +7,14 @@ import { Providers } from "./providers";
 import "./globals.css";
 import Script from "next/script";
 
-const inter = Inter({ subsets: ["latin"] });
+const quicksand = Quicksand({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://dadosfera.ai"),
-  title: "Dadosfera MCP Chat",
-  description: "Dadosfera MCP Chat is a minimalistic MCP client with a good feature set.",
+  title: "Dadosfera AutodriveDDF Chat",
+  description: "Dadosfera AutodriveDDF Chat is a minimalistic MCP client with a good feature set.",
   openGraph: {
-    siteName: "Dadosfera MCP Chat",
+    siteName: "Dadosfera AutodriveDDF Chat",
     url: "https://dadosfera.ai/",
     images: [
       {
@@ -33,7 +33,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.className}`}>
+      <body className={`${quicksand.className}`}>
         <Providers>
           <div className="flex h-dvh w-full">
             <ChatSidebar />
@@ -51,7 +51,7 @@ export default function RootLayout({
             </main>
           </div>
         </Providers>
-        <Script defer src="https://cloud.umami.is/script.js" data-website-id="1373896a-fb20-4c9d-b718-c723a2471ae5" />
+        {/* <Script defer src="https://cloud.umami.is/script.js" data-website-id="1373896a-fb20-4c9d-b718-c723a2471ae5" /> */}
       </body>
     </html>
   );

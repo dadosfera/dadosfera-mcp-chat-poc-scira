@@ -45,7 +45,7 @@ export function ThemeToggle({ className, ...props }: React.ComponentProps<typeof
         </DropdownMenuItem>
 
         <DropdownMenuItem onSelect={() => setTheme("dff")}>
-          <Sun className="mr-2 h-4 w-4" />
+        <CircleDashed className="mr-2 h-4 w-4" />
           <span>Dadosfera</span>
         </DropdownMenuItem>
       </DropdownMenuContent>

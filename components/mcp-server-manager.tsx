@@ -472,9 +472,9 @@ export const MCPServerManager = ({
                                     <ServerIcon className="h-7 w-7 text-primary" />
                                 </div>
                                 <div className="text-center space-y-1">
-                                    <h3 className="text-base font-medium">No MCP Servers Added</h3>
+                                    <h3 className="text-base font-medium">No Integrations Added</h3>
                                     <p className="text-sm text-muted-foreground max-w-[300px]">
-                                        Add your first MCP server to access additional AI tools
+                                        Add your first Integration to access additional AI tools
                                     </p>
                                 </div>
                                 <div className="flex items-center gap-1.5 text-xs text-muted-foreground mt-4">

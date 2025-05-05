@@ -143,7 +143,7 @@ export function ChatSidebar() {
                             <Image src="/dadosfera.svg" alt="Dadosfera Logo" width={24} height={24} className="absolute transform scale-75" unoptimized quality={100} />
                         </div>
                         {!isCollapsed && (
-                            <div className="font-semibold text-lg text-foreground/90">MCP</div>
+                            <div className="font-semibold text-lg text-foreground/90">AutodriveDDF</div>
                         )}
                     </div>
                 </div>
@@ -248,7 +248,7 @@ export function ChatSidebar() {
                         "px-4 pt-0 text-xs font-medium text-muted-foreground/80 uppercase tracking-wider",
                         isCollapsed ? "sr-only" : ""
                     )}>
-                        MCP Servers
+                        Integrations
                     </SidebarGroupLabel>
                     <SidebarGroupContent>
                         <SidebarMenu>
@@ -259,14 +259,14 @@ export function ChatSidebar() {
                                         "w-full flex items-center gap-2 transition-all",
                                         "hover:bg-secondary/50 active:bg-secondary/70"
                                     )}
-                                    tooltip={isCollapsed ? "MCP Servers" : undefined}
+                                    tooltip={isCollapsed ? "Integrations" : undefined}
                                 >
                                     <ServerIcon className={cn(
                                         "h-4 w-4 flex-shrink-0",
                                         activeServersCount > 0 ? "text-primary" : "text-muted-foreground"
                                     )} />
                                     {!isCollapsed && (
-                                        <span className="flex-grow text-sm text-foreground/80">MCP Servers</span>
+                                        <span className="flex-grow text-sm text-foreground/80">Integrations</span>
                                     )}
                                     {activeServersCount > 0 && !isCollapsed ? (
                                         <Badge 
@@ -392,13 +392,6 @@ export function ChatSidebar() {
                                 }}>
                                     <Key className="mr-2 h-4 w-4 hover:text-sidebar-accent" />
                                     API Keys
-                                </DropdownMenuItem>
-                                <DropdownMenuItem onSelect={(e) => {
-                                    e.preventDefault();
-                                    window.open("https://git.new/s-mcp", "_blank");
-                                }}>
-                                    <Github className="mr-2 h-4 w-4 hover:text-sidebar-accent" />
-                                    GitHub
                                 </DropdownMenuItem>
                                 <DropdownMenuItem onSelect={(e) => e.preventDefault()}>
                                     <div className="flex items-center justify-between w-full">
